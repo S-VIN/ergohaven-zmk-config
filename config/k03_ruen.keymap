@@ -12,6 +12,17 @@
             #sensor-binding-cells = <0>;
             bindings = <&kp C_VOL_UP>, <&kp C_VOL_DN>;
         };
+
+        hold: hold {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLD";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <150>;
+        };
     };
 
     combos {
@@ -111,11 +122,11 @@
         ru {
             display-name = "Ru";
             bindings = <
-&kp RU_CYRILLIC_YU  &kp N1                   &kp N2                &kp N3              &kp N4              &kp N5                                                        &kp N6              &kp N7                     &kp N8               &kp N9                 &kp N0              &kp HOME
-&kp ESC             &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                                            &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA  &kp RU_CYRILLIC_ZE  &kp BACKSPACE
-&kp TAB             &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                                            &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O          &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE     &kp SEMI            &kp DELETE
-&kp LSHFT           &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I   &kp RU_CYRILLIC_HA    &kp RU_CYRILLIC_BE  &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp COMMA            &kp DOT                &kp COLON           &kp RSHFT
-                                             &kp LGUI              &kp LALT            &kp LCTRL           &mo 2               &kp SPACE             &kp ENTER           &mo 3               &kp RCTRL                  &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
+&kp RU_CYRILLIC_YU  &kp N1                   &kp N2                &kp N3              &kp N4              &kp N5                                                                                          &kp N6              &kp N7                                             &kp N8               &kp N9                 &kp N0                               &kp HOME
+&kp ESC             &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA  &hold RU_CYRILLIC_IE RU_CYRILLIC_IO                                                             &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE                                &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA  &hold RU_CYRILLIC_ZE RU_CYRILLIC_HA  &kp BACKSPACE
+&kp TAB             &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                                                                              &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O                                  &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE     &kp SEMI                             &kp DELETE
+&kp LSHFT           &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I                    &hold RU_CYRILLIC_ZHE RU_CYRILLIC_E    &kp RU_CYRILLIC_BE  &kp RU_CYRILLIC_TE  &hold RU_CYRILLIC_SOFT_SIGN RU_CYRILLIC_HARD_SIGN  &kp COMMA            &kp DOT                &kp COLON                            &kp RSHFT
+                                             &kp LGUI              &kp LALT            &kp LCTRL           &mo 2                                &kp SPACE                              &kp ENTER           &mo 3               &kp RCTRL                                          &kp RALT             &kp RGUI
             >;
 
             sensor-bindings =
