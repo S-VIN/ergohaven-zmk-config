@@ -144,9 +144,9 @@
         nav {
             bindings = <
 &kp F1  &kp F2            &kp F3        &kp F4    &kp F5         &kp F6                                     &kp F7           &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
-&trans  &trans            &kp HOME      &kp UP    &kp END        &trans                                     &kp PG_UP        &trans  &trans  &trans   &trans   &trans
-&trans  &trans            &kp LEFT      &kp DOWN  &kp RIGHT      &trans                                     &kp PG_DN        &trans  &trans  &trans   &trans   &trans
-&trans  &kp LC(LS(LEFT))  &kp LC(LEFT)  &trans    &kp LC(RIGHT)  &kp LC(LS(RIGHT_ARROW))  &trans    &trans  &kp PRINTSCREEN  &trans  &trans  &trans   &trans   &trans
+&none   &none             &kp HOME      &kp UP    &kp END        &none                                      &kp PG_UP        &none   &none   &none    &none    &none
+&none   &none             &kp LEFT      &kp DOWN  &kp RIGHT      &none                                      &kp PG_DN        &none   &none   &none    &none    &none
+&none   &kp LC(LS(LEFT))  &kp LC(LEFT)  &none     &kp LC(RIGHT)  &kp LC(LS(RIGHT_ARROW))  &none     &none   &kp PRINTSCREEN  &none   &none   &none    &none    &none
                           &trans        &trans    &trans         &trans                   &trans    &trans  &mo 5            &trans  &trans  &trans
             >;
 
@@ -155,11 +155,11 @@
 
         sym_en {
             bindings = <
-&trans  &trans     &kp AT    &kp DLLR   &kp HASH  &trans                       &trans     &trans    &kp CARET  &trans    &trans    &trans
-&trans  &trans     &kp LT    &kp EQUAL  &kp GT    &kp GRAVE                    &trans     &kp LBKT  &kp UNDER  &kp RBKT  &trans    &trans
-&trans  &kp BSLH   &kp LPAR  &kp MINUS  &kp RPAR  &kp PLUS                     &kp PRCNT  &kp LBRC  &kp SEMI   &kp RBRC  &kp EXCL  &kp QUESTION
-&trans  &kp COMMA  &kp STAR  &kp COLON  &kp FSLH  &trans     &trans    &trans  &trans     &kp PIPE  &kp TILDE  &kp AMPS  &kp DOT   &trans
-                   &trans    &trans     &trans    &mo 5      &trans    &trans  &trans     &trans    &trans     &trans
+&none  &none      &kp AT    &kp DLLR   &kp HASH  &none                        &none      &none     &kp CARET  &none     &none     &none
+&none  &none      &kp LT    &kp EQUAL  &kp GT    &kp GRAVE                    &none      &kp LBKT  &kp UNDER  &kp RBKT  &none     &none
+&none  &kp BSLH   &kp LPAR  &kp MINUS  &kp RPAR  &kp PLUS                     &kp PRCNT  &kp LBRC  &kp SEMI   &kp RBRC  &kp EXCL  &kp QUESTION
+&none  &kp COMMA  &kp STAR  &kp COLON  &kp FSLH  &none      &none     &none   &none      &kp PIPE  &kp TILDE  &kp AMPS  &kp DOT   &none
+                  &trans    &trans     &trans    &mo 5      &trans    &trans  &trans     &trans    &trans     &trans
             >;
 
             display-name = "Symbols";
@@ -168,21 +168,21 @@
         sym_ru {
             display-name = "Symbols";
             bindings = <
-&trans  &trans        &en AT        &en DLLR      &en HASH     &trans                       &trans          &trans    &en CARET    &trans    &trans      &trans
-&trans  &trans        &en LT        &kp EQUAL     &en GT       &en GRAVE                    &trans          &en LBKT  &kp UNDER    &en RBKT  &trans      &trans
-&trans  &kp RU_BSLH   &kp LPAR      &kp MINUS     &kp RPAR     &kp PLUS                     &kp RU_PERCENT  &en LBRC  &kp RU_SEMI  &en RBRC  &kp EXCL    &kp RU_QUESTION
-&trans  &kp RU_COMMA  &kp RU_ASTRK  &kp RU_COLON  &kp RU_FSLH  &trans     &trans    &trans  &trans          &en PIPE  &en TILDE    &en AMPS  &kp RU_DOT  &trans
-                      &trans        &trans        &trans       &mo 5      &trans    &trans  &trans          &trans    &trans       &trans
+&none  &none         &en AT        &en DLLR      &en HASH     &none                        &none           &none     &en CARET    &none     &none       &none
+&none  &none         &en LT        &kp EQUAL     &en GT       &en GRAVE                    &none           &en LBKT  &kp UNDER    &en RBKT  &none       &none
+&none  &kp RU_BSLH   &kp LPAR      &kp MINUS     &kp RPAR     &kp PLUS                     &kp RU_PERCENT  &en LBRC  &kp RU_SEMI  &en RBRC  &kp EXCL    &kp RU_QUESTION
+&none  &kp RU_COMMA  &kp RU_ASTRK  &kp RU_COLON  &kp RU_FSLH  &none      &none     &none   &none           &en PIPE  &en TILDE    &en AMPS  &kp RU_DOT  &none
+                     &trans        &trans        &trans       &mo 5      &trans    &trans  &trans          &trans    &trans       &trans
             >;
         };
 
         adj {
             bindings = <
-&bootloader  &trans  &trans  &trans  &trans  &trans                    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2      &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR_ALL
-&trans       &trans  &trans  &trans  &trans  &trans                    &trans        &trans        &trans            &trans        &trans        &studio_unlock
-&trans       &trans  &trans  &trans  &trans  &trans                    &out OUT_BLE  &kp C_VOL_DN  &kp C_MUTE        &kp C_VOL_UP  &trans        &trans
-&trans       &trans  &trans  &trans  &trans  &trans  &trans    &trans  &out OUT_USB  &kp C_PREV    &kp C_PLAY_PAUSE  &kp C_NEXT    &trans        &trans
-                     &trans  &trans  &trans  &trans  &trans    &trans  &trans        &trans        &trans            &trans
+&bootloader  &none  &none   &none   &none   &none                     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2      &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR_ALL
+&none        &none  &none   &none   &none   &none                     &none         &none         &none             &none         &none         &studio_unlock
+&none        &none  &none   &none   &none   &none                     &out OUT_BLE  &kp C_VOL_DN  &kp C_MUTE        &kp C_VOL_UP  &none         &none
+&none        &none  &none   &none   &none   &none   &none     &none   &out OUT_USB  &kp C_PREV    &kp C_PLAY_PAUSE  &kp C_NEXT    &none         &none
+                    &trans  &trans  &trans  &trans  &trans    &trans  &trans        &trans        &trans            &trans
             >;
 
             display-name = "Adjust";
